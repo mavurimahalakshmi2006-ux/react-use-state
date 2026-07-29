@@ -34,7 +34,7 @@ function App() {
       ...tasks,
       {
         id: tasks.length + 1,
-        name: "New Task",
+        name: "New Tasks",
         description: "This is a new task",
       },
     ]);
