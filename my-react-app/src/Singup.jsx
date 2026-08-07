@@ -1,13 +1,19 @@
 import { useState } from "react";
 
-function Maha() {
+function Signup() {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
     confirmPassword: "",
   });
 
+  
   const submit = (e) => {
+    console.log(e.target.value);
+    if(e.target.value===""){
+      alert(e.target.name,' is required');
+     return 
+    }
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -57,9 +63,9 @@ function Maha() {
 
       <br />
 
-      <button type="submit">Login</button>
+      <button type="submit">signup</button>
     </form>
   );
 }
 
-export default Maha;
+export default Signup;
